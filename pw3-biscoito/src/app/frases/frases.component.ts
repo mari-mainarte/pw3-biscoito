@@ -6,9 +6,9 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './frases.component.html',
   styleUrl: './frases.component.css'
 })
-export class FrasesComponent implements OnInit{
+export class FrasesComponent{
 frases = [
-  "Deixe de lado as preocupações e seja feliz", 
+  "Deixe de lado as preocupações e seja feliz",
   "A nossa vida tem 4 sentidos… Amar, Sofrer, Lutar e Vencer. Ame muito, sofra pouco, lute bastante e vença sempre",
   "Conhecimento é a única virtude e ignorância é o único vício",
   "Sem o fogo do entusiasmo, não há o calor da vitória",
@@ -20,19 +20,13 @@ frases = [
   "A sua visão se tornará mais clara apenas quando conseguir olhar para dentro do seu coração."]
 
 frase = ''
+min = 0
+max = 9
 index = 0
 
-ngOnInit(){
-    this.fraseAleatoria()
-}
-
-
 fraseAleatoria(){
-  this.index = Math.round(Math.random()*10)
-  this.frase = this.frases[this.index] 
-
+  this.index =  Math.floor(Math.random() * (this.max - this.min + 1)) + this.min;
+  this.frase = this.frases[this.index]
 }
-
-@Input() exibicao : boolean = true
 
 }
