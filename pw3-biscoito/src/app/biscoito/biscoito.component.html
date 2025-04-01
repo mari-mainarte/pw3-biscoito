@@ -1,5 +1,7 @@
 <div class="container">
-  <app-imagem [srcBiscoito]="imagem"></app-imagem>
-  <app-botao ></app-botao>
+  <app-imagem [srcBiscoito]="statusBiscoito"></app-imagem>
+  <app-botao
+   (estadoBiscoito)="quebrar($event)">
+  </app-botao>
   <app-frases></app-frases>
 </div>

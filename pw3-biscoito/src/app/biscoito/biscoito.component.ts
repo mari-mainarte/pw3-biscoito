@@ -10,8 +10,16 @@ import { FrasesComponent } from "../frases/frases.component";
   styleUrl: './biscoito.component.css'
 })
 export class BiscoitoComponent {
-  @Input() statusBiscoito : boolean = true
+  @Input() statusBiscoito : string = ""
+  @Input() frase : string = ""
 
-  imagem = "biscoito-aberto.png";
+  quebrar(biscoito: string){
+    this.statusBiscoito = biscoito;
+  }
+
+  reiniciar(biscoito: string){
+    this.statusBiscoito = biscoito;
+  }
+
 
 }

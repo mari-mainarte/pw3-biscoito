@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-frases',
@@ -17,16 +17,17 @@ frases = [
   "Podemos escolher o que semear, mas somos obrigados a colher o que plantamos.",
   "Quem quer colher rosas tem de estar preparado para suportar os espinhos.",
   "Quem olha para fora sonha, quem olha para dentro acorda.",
-  "A sua visão se tornará mais clara apenas quando conseguir olhar para dentro do seu coração."]
+  "A sua visão se tornará mais clara apenas quando conseguir olhar para dentro do seu coração."
+]
 
-frase = ''
 min = 0
 max = 9
-index = 0
+
+@Input() visibilidadeFrase = false
 
 fraseAleatoria(){
-  this.index =  Math.floor(Math.random() * (this.max - this.min + 1)) + this.min;
-  this.frase = this.frases[this.index]
+  var index =  Math.floor(Math.random() * (this.max - this.min + 1)) + this.min;
+  return this.frases[index]
 }
 
 }
