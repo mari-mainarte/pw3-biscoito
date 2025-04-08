@@ -10,16 +10,13 @@ import { FrasesComponent } from "../frases/frases.component";
   styleUrl: './biscoito.component.css'
 })
 export class BiscoitoComponent {
-  @Input() statusBiscoito : string = ""
-  @Input() frase : string = ""
+  quebrado : boolean = false;
 
-  quebrar(biscoito: string){
-    this.statusBiscoito = biscoito;
+  quebrar(){
+    this.quebrado = true;
   }
 
-  reiniciar(biscoito: string){
-    this.statusBiscoito = biscoito;
+  reiniciar(){
+    this.quebrado = false;
   }
-
-
 }

@@ -7,5 +7,9 @@ import { Component, Input } from '@angular/core';
   styleUrl: './imagem.component.css'
 })
 export class ImagemComponent{
-  @Input() srcBiscoito = 'biscoito.png'
+  @Input() quebrar : boolean = true;
+
+  biscoito : string = 'biscoito.png';
+  biscoitoQuebrado : string = 'biscoito-aberto.png';
+
 }

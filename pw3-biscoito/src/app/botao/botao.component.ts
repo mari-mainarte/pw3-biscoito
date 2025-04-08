@@ -9,21 +9,12 @@ import { FrasesComponent } from '../frases/frases.component';
   styleUrl: './botao.component.css'
 })
 export class BotaoComponent{
-@Input() tipoBotao : string = ""
+@Input() tipoBotao : boolean = true
 @Input() textoBotao : string = ""
-@Output() estadoBiscoito = new EventEmitter()
+@Input() desabilitar : boolean = false;
+@Output() clicked = new EventEmitter();
 
-
-quebrarBiscoito(){
-  var biscoito = "biscoito-aberto.png"
-  this.estadoBiscoito.emit(biscoito);
+clicado(){
+  this.clicked.emit();
 }
-
-
-reiniciarBiscoito(){
-   var reiniciarBiscoito = "biscoito.png"
-   this.estadoBiscoito.emit(reiniciarBiscoito);
-}
-
-
 }

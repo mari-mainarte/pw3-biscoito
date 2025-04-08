@@ -23,3 +23,12 @@
   color: #121212;
   background-color: #ffffff;
 }
+
+.containerBtn{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  width: 100vw;
+}

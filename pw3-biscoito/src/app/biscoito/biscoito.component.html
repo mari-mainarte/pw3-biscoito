@@ -1,7 +1,15 @@
 <div class="container">
-  <app-imagem [srcBiscoito]="statusBiscoito"></app-imagem>
+  <app-imagem [quebrar]="quebrado"></app-imagem>
+  <app-frases [exibe]="quebrado"></app-frases>
   <app-botao
-   (estadoBiscoito)="quebrar($event)">
-  </app-botao>
-  <app-frases></app-frases>
+  [textoBotao]="'Quebrar Biscoito'"
+  [desabilitar]="quebrado"
+  (clicked)="quebrar()"
+  [desabilitar]="quebrado"
+  ></app-botao>
+  <app-botao
+  [tipoBotao]="false"
+  [textoBotao]="'Reiniciar Biscoito'"
+  (clicked)="reiniciar()"
+  ></app-botao>
 </div>

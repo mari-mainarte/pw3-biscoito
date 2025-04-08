@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, input, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-frases',
@@ -23,7 +23,7 @@ frases = [
 min = 0
 max = 9
 
-@Input() visibilidadeFrase = false
+@Input() exibe : boolean = false;
 
 fraseAleatoria(){
   var index =  Math.floor(Math.random() * (this.max - this.min + 1)) + this.min;
